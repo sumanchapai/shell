@@ -1,0 +1,13 @@
+#! /bin/bash
+
+let total=0
+for i in $(</dev/stdin) #read from stdin
+do
+    if [[ -f $i ]]
+    then
+    file_line_count=$(wc -l $i)
+    echo $file_line_count
+    let total=total+$(echo $file_line_count | awk '{print $1}')
+    fi
+done 
+echo Total: $total
