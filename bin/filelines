@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 let total=0
 for i in $(</dev/stdin) #read from stdin
