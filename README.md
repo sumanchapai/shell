@@ -14,8 +14,10 @@ PATH=$PATH:repolocation/bin
 
 ### `filelines`
 
-`filelines` is supposed to find number of lines for a list of
-file names and their sum. Directories are ignored. Usage as follows:
+`filelines` is supposed to find number of lines for a list of file
+names and their sum. Directories are ignored. Usage as follows (`-a`
+includes hidden files):
+
 
 ```
 ls -a | filelines 
@@ -23,4 +25,3 @@ ls -a | filelines
 22 README.md
 Total: 22
 ```
-Note that `-a` option means to include all files (including hidden).
