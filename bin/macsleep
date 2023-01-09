@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+seconds=$1
+re='^[0-9]+$'
+if ! [[ $seconds =~ $re ]]; then
+    echo -e "Invalid usage\nUse as macsleep x where x is number of seconds"
+    exit 1
+fi
+sleep ${seconds} && osascript -e 'tell application "Finder" to sleep' &
